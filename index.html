@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comfort Point Heating & Cooling | HVAC for Bucks, Montgomery & Philadelphia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,8 +13,9 @@
     <div class="top-bar">
         <div class="container top-bar-inner">
             <div class="top-left">
-                <a href="#"><i data-lucide="phone"></i> 215-245-3200</a>
-                <span>Available 24/7 For Emergencies</span>
+                <a href="tel:6094774605"><i data-lucide="phone"></i> 609-477-4605</a>
+                <span style="margin: 0 10px;">|</span>
+                <span>24 hr emergency service. Free estimate.</span>
             </div>
             <div class="top-right">
                 <a href="#">Client Portal</a>
@@ -29,7 +30,10 @@
         <div class="container header-inner">
             <div class="logo">
                 <img src="assets/img/logo.png" alt="Comfort Point Logo" class="brand-logo">
-                <span class="logo-text">COMFORT<br><span class="highlight">POINT</span></span>
+                <div class="logo-text-wrapper">
+                    <span class="logo-text-main"><span class="color-primary">COMFORT</span><br><span class="color-secondary">POINT</span></span>
+                    <span class="logo-text-sub">Heating & Cooling</span>
+                </div>
             </div>
             <nav class="desktop-nav">
                 <ul>
@@ -42,7 +46,7 @@
                 </ul>
             </nav>
             <div class="header-cta">
-                <a href="#" class="btn btn-primary">Schedule Service</a>
+                <button data-token="8860770714c74b73b30adc0fcf782682" data-orgname="ComfortPoint-LLC" class="btn btn-primary hcp-button" onClick="HCPWidget.openModal()">Schedule Service</button>
             </div>
         </div>
     </header>
@@ -57,7 +61,7 @@
                     <h1>Providing Heating and Cooling Solutions <span>Since 1990</span></h1>
                     <p>We take pride in providing our customers with the latest technology and service.</p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-primary btn-lg">Request an Estimate</a>
+                        <button data-token="8860770714c74b73b30adc0fcf782682" data-orgname="ComfortPoint-LLC" class="btn btn-primary btn-lg hcp-button" onClick="HCPWidget.openModal()">Request an Estimate</button>
                         <a href="#" class="btn btn-secondary btn-lg">Emergency Service</a>
                     </div>
                 </div>
@@ -131,7 +135,7 @@
         <section class="cta-banner">
             <div class="container text-center">
                 <h2>Ready to upgrade your home comfort?</h2>
-                <a href="#" class="btn btn-primary btn-lg">Schedule Your Appointment</a>
+                <button data-token="8860770714c74b73b30adc0fcf782682" data-orgname="ComfortPoint-LLC" class="btn btn-primary btn-lg hcp-button" onClick="HCPWidget.openModal()">Schedule Your Appointment</button>
             </div>
         </section>
     </main>
@@ -141,22 +145,25 @@
         <div class="container footer-grid">
             <div class="footer-col brand-col">
                 <img src="assets/img/logo.png" alt="Comfort Point Logo" class="footer-logo">
-                <p>123 Comfort Lane<br>Levittown, PA 19054</p>
-                <p class="phone">(215) 245-3200</p>
-                <div class="social-icons">
-                    <a href="#"><i data-lucide="facebook"></i></a>
-                    <a href="#"><i data-lucide="twitter"></i></a>
-                    <a href="#"><i data-lucide="instagram"></i></a>
+                <p><strong>ComfortPoint LLC</strong><br>
+                <a href="mailto:Ops@thecomfortpoint.com" style="color: #ccc;">Ops@thecomfortpoint.com</a><br>
+                <a href="mailto:Fernando@thecomfortpoint.com" style="color: #ccc;">Fernando@thecomfortpoint.com</a></p>
+                <p><a href="https://Thecomfortpoint.com" style="color: var(--secondary);">Thecomfortpoint.com</a></p>
+                <p class="phone">609-477-4605</p>
+                <p style="color: var(--primary); font-weight: bold; margin-bottom: 15px;">License and insurance.</p>
+                <div class="social-icons" style="display: flex; align-items: center;">
+                    <a href="https://instagram.com/thecomfortpoint"><i data-lucide="instagram"></i></a>
+                    <span>@thecomfortpoint</span>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#">Heating</a></li>
-                    <li><a href="#">Cooling</a></li>
+                    <li><a href="#">Ac and heat service</a></li>
                     <li><a href="#">Ductless</a></li>
-                    <li><a href="#">Plumbing</a></li>
-                    <li><a href="#">Heating Oil</a></li>
+                    <li><a href="#">Repairs</a></li>
+                    <li><a href="#">Installation</a></li>
+                    <li><a href="#">24 hr emergency service</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -172,7 +179,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Comfort Point. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+                <p>&copy; 2026 ComfortPoint LLC. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
@@ -181,5 +188,8 @@
     <script>
         lucide.createIcons();
     </script>
+    
+    <!-- Housecallpro Online booking script -->
+    <script async src="https://online-booking.housecallpro.com/script.js?token=8860770714c74b73b30adc0fcf782682&orgName=ComfortPoint-LLC"></script>
 </body>
 </html>

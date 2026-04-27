@@ -1,20 +1,21 @@
 :root {
     /* Comfort Point Brand Colors */
-    --primary: #FF7F50; /* Coral Orange */
-    --primary-hover: #e66a3e;
-    --secondary: #00CED1; /* Aqua / Cyan */
-    --secondary-hover: #00b3b5;
+    --primary: #FF7550; /* Coral Orange */
+    --primary-hover: #e05e3b;
+    --secondary: #2BD2D2; /* Aqua / Cyan */
+    --secondary-hover: #1fbab5;
+    --dark-teal: #008080; /* Dark Teal */
     
-    --text-dark: #333333;
+    --text-dark: #2d3748;
     --text-light: #ffffff;
-    --text-grey: #666666;
+    --text-grey: #718096;
     
     --bg-light: #f4f6f7;
     --bg-white: #ffffff;
-    --bg-dark: #222222;
-    --brand-dark: #0e1e1e;
+    --bg-dark: #1a202c;
+    --brand-dark: #ffffff;
     
-    --font-heading: 'Roboto Slab', serif;
+    --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
 }
 
@@ -97,7 +98,7 @@ a {
 
 /* Top Utility Bar */
 .top-bar {
-    background-color: var(--primary);
+    background-color: var(--dark-teal);
     color: var(--text-light);
     font-size: 14px;
     padding: 8px 0;
@@ -134,7 +135,8 @@ a {
 .main-header {
     background-color: var(--brand-dark);
     padding: 20px 0;
-    border-bottom: 1px solid #333333;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border-bottom: none;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -156,17 +158,36 @@ a {
     max-height: 80px;
 }
 
-.logo-text {
-    color: var(--text-light);
-    font-size: 26px;
-    font-weight: 800;
-    line-height: 1;
-    font-family: var(--font-heading);
-    letter-spacing: -0.5px;
+.logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.logo-text .highlight {
+.logo-text-main {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 0.9;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.color-primary {
+    color: var(--primary);
+}
+
+.color-secondary {
     color: var(--secondary);
+}
+
+.logo-text-sub {
+    font-size: 11px;
+    font-weight: 700;
+    color: #cbd5e0;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
 }
 
 .desktop-nav ul {
@@ -176,8 +197,8 @@ a {
 }
 
 .desktop-nav a {
-    color: var(--text-light);
-    font-weight: 600;
+    color: var(--text-dark);
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 14px;
 }
