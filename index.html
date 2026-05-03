@@ -13,11 +13,14 @@
     <div class="top-bar">
         <div class="container top-bar-inner">
             <div class="top-left">
-                <a href="tel:6094774605"><i data-lucide="phone"></i> 609-477-4605</a>
-                <span style="margin: 0 10px;">|</span>
-                <span>24 hr emergency service. Free estimate.</span>
+                <a href="tel:6094774605" class="mobile-phone-cta">
+                    <span class="phone-icon-wrapper"><i data-lucide="phone"></i></span>
+                    <span class="phone-number-text">609-477-4605</span>
+                </a>
+                <span class="hide-on-mobile" style="margin: 0 10px;">|</span>
+                <span class="hide-on-mobile">24 hr emergency service. Free estimate.</span>
             </div>
-            <div class="top-right">
+            <div class="top-right hide-on-mobile">
                 <a href="#">Client Portal</a>
                 <a href="#">Leave a Review</a>
                 <a href="#">Careers</a>
@@ -35,7 +38,28 @@
                     <span class="logo-text-sub">Heating & Cooling</span>
                 </div>
             </div>
-            <nav class="desktop-nav">
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span>MENU</span>
+            </button>
+            
+            <div class="nav-overlay"></div>
+            
+            <div class="nav-wrapper">
+                <div class="mobile-menu-header">
+                    <div class="logo" style="transform: scale(0.8); transform-origin: left center;">
+                        <img src="assets/img/logo.png" alt="Comfort Point Logo" class="brand-logo">
+                        <div class="logo-text-wrapper">
+                            <span class="logo-text-main"><span class="color-primary">COMFORT</span><br><span class="color-secondary">POINT</span></span>
+                            <span class="logo-text-sub">Heating & Cooling</span>
+                        </div>
+                    </div>
+                    <button class="mobile-close-btn" aria-label="Close menu">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                
+                <nav class="desktop-nav">
                 <ul>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Heating</a></li>
@@ -44,9 +68,10 @@
                     <li><a href="#">Plumbing</a></li>
                     <li><a href="#">Oil Delivery</a></li>
                 </ul>
-            </nav>
-            <div class="header-cta">
-                <button data-token="8860770714c74b73b30adc0fcf782682" data-orgname="ComfortPoint-LLC" class="btn btn-primary hcp-button" onClick="HCPWidget.openModal()">Schedule Service</button>
+                </nav>
+                <div class="header-cta">
+                    <button data-token="8860770714c74b73b30adc0fcf782682" data-orgname="ComfortPoint-LLC" class="btn btn-primary hcp-button" onClick="HCPWidget.openModal()">Schedule Service</button>
+                </div>
             </div>
         </div>
     </header>
