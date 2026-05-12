@@ -31,13 +31,9 @@
     <!-- Main Navigation -->
     <header class="main-header">
         <div class="container header-inner">
-            <div class="logo">
-                <img src="assets/img/logo.png" alt="Comfort Point Logo" class="brand-logo">
-                <div class="logo-text-wrapper">
-                    <span class="logo-text-main"><span class="color-primary">COMFORT</span><br><span class="color-secondary">POINT</span></span>
-                    <span class="logo-text-sub">Heating & Cooling</span>
-                </div>
-            </div>
+            <a href="#" class="logo">
+                <img src="assets/img/logo-full.jpg" alt="Comfort Point Heating & Cooling" class="brand-logo" style="max-height: 50px;">
+            </a>
             
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 <span>MENU</span>
@@ -47,13 +43,9 @@
             
             <div class="nav-wrapper">
                 <div class="mobile-menu-header">
-                    <div class="logo" style="transform: scale(0.8); transform-origin: left center;">
-                        <img src="assets/img/logo.png" alt="Comfort Point Logo" class="brand-logo">
-                        <div class="logo-text-wrapper">
-                            <span class="logo-text-main"><span class="color-primary">COMFORT</span><br><span class="color-secondary">POINT</span></span>
-                            <span class="logo-text-sub">Heating & Cooling</span>
-                        </div>
-                    </div>
+                    <a href="#" class="logo" style="transform: scale(0.9); transform-origin: left center; text-decoration: none;" onClick="document.querySelector('.nav-wrapper').classList.remove('active'); document.querySelector('.nav-overlay').classList.remove('active'); document.body.style.overflow=''">
+                        <img src="assets/img/logo-full.jpg" alt="Comfort Point Heating & Cooling" class="brand-logo" style="max-height: 45px;">
+                    </a>
                     <button class="mobile-close-btn" aria-label="Close menu">
                         <i data-lucide="chevron-right"></i>
                     </button>
@@ -61,7 +53,8 @@
                 
                 <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="#" onClick="document.querySelector('.nav-wrapper').classList.remove('active'); document.querySelector('.nav-overlay').classList.remove('active'); document.body.style.overflow=''">Home</a></li>
+                    <li><a href="#about" onClick="document.querySelector('.nav-wrapper').classList.remove('active'); document.querySelector('.nav-overlay').classList.remove('active'); document.body.style.overflow=''">About Us</a></li>
                     <li><a href="#">Heating</a></li>
                     <li><a href="#">Cooling</a></li>
                     <li><a href="#">Ductless</a></li>
@@ -135,23 +128,71 @@
             </div>
         </section>
 
-        <!-- A Team You Can Trust -->
-        <section class="trust-section">
-            <div class="container trust-inner">
-                <div class="trust-image">
-                    <!-- Placeholder for team image, using hero image for now -->
-                    <img src="assets/img/hero.png" alt="Comfort Point Team">
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <div class="about-block">
+                            <h2>Our Story</h2>
+                            <p>At ComfortPoint LLC, we believe that "home" should be the most comfortable place on earth. Based right here in Morrisville, PA, we started this company with a simple goal: to provide our Bucks County neighbors with honest, high-quality HVAC solutions without the "big corporation" runaround.</p>
+                            <p>We know the local climate—from the humid Delaware River summers to those freezing Pennsylvania winters. That’s why we’ve dedicated ourselves to mastering the systems that keep your family safe and comfortable, no matter what’s happening outside.</p>
+                        </div>
+                        
+                        <div class="about-block">
+                            <h2>Our Mission</h2>
+                            <p>To provide the Morrisville and Greater Bucks County area with reliable, energy-efficient, and affordable HVAC services. We don't just fix units; we build long-term relationships based on trust, integrity, and superior technical skill.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image-wrapper">
+                        <div class="about-image-card">
+                            <!-- Placeholder image for Team/Truck -->
+                            <img src="assets/img/hero.png" alt="Comfort Point Team">
+                            <div class="image-caption">
+                                <h3>Meet the Team</h3>
+                                <p>Our team is comprised of dedicated professionals who take pride in their trade. When a ComfortPoint technician arrives at your door, you’re getting a neighbor who is committed to doing the job right the first time.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="trust-content">
-                    <h2>A Team You Can Trust</h2>
-                    <p>We are a family-owned and operated company that has been serving the area for over 30 years. Our technicians are highly trained and background-checked so you can feel comfortable having them in your home.</p>
-                    <ul class="trust-list">
-                        <li><i data-lucide="check-circle"></i> 24/7 Emergency Service</li>
-                        <li><i data-lucide="check-circle"></i> Upfront Pricing, No Surprises</li>
-                        <li><i data-lucide="check-circle"></i> Flexible Financing Options</li>
-                        <li><i data-lucide="check-circle"></i> 100% Satisfaction Guarantee</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary">Learn More About Us</a>
+
+                <div class="why-choose-us">
+                    <div class="section-header text-center">
+                        <h2>Why Choose ComfortPoint?</h2>
+                        <p class="subtitle" style="margin-top: 15px;">We know you have choices when it comes to heating and cooling. Here is why your neighbors trust us:</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-box">
+                            <div class="feature-icon"><i data-lucide="map-pin"></i></div>
+                            <h4>Local Roots</h4>
+                            <p>We aren't a distant franchise. We’re part of the Morrisville community, which means our reputation is on the line with every service call.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon"><i data-lucide="dollar-sign"></i></div>
+                            <h4>Transparent Pricing</h4>
+                            <p>No "hidden fees" or surprise surcharges. We provide clear, upfront estimates so you can make informed decisions for your home.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon"><i data-lucide="wrench"></i></div>
+                            <h4>Expert Craftsmanship</h4>
+                            <p>Our technicians are licensed, insured, and trained on the latest energy-efficient technology to save you money on your monthly bills.</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon"><i data-lucide="sparkles"></i></div>
+                            <h4>Clean-Home Guarantee</h4>
+                            <p>We respect your space. We use floor protection and clean up our workspace entirely before we leave.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-cta">
+                    <h2>Ready to get comfortable?</h2>
+                    <p>Whether it’s a mid-winter furnace emergency or a routine AC tune-up, ComfortPoint LLC is just a phone call away.</p>
+                    <div class="about-cta-buttons">
+                        <button data-token="8860770714c74b73b30adc0fcf782682" data-orgname="ComfortPoint-LLC" class="btn btn-primary hcp-button" onClick="HCPWidget.openModal()">Schedule Service Now</button>
+                        <a href="tel:6094774605" class="btn btn-secondary"><i data-lucide="phone"></i> Call 609-477-4605</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -169,7 +210,7 @@
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-col brand-col">
-                <img src="assets/img/logo.png" alt="Comfort Point Logo" class="footer-logo">
+                <img src="assets/img/logo-full.jpg" alt="Comfort Point Heating & Cooling" class="footer-logo" style="max-height: 60px; border-radius: 4px;">
                 <p><strong>ComfortPoint LLC</strong><br>
                 <a href="mailto:Ops@thecomfortpoint.com" style="color: #ccc;">Ops@thecomfortpoint.com</a><br>
                 <a href="mailto:Fernando@thecomfortpoint.com" style="color: #ccc;">Fernando@thecomfortpoint.com</a></p>

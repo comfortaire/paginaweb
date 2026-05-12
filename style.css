@@ -152,42 +152,11 @@ a {
     display: flex;
     align-items: center;
     gap: 15px;
+    text-decoration: none;
 }
 
 .brand-logo {
     max-height: 80px;
-}
-
-.logo-text-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.logo-text-main {
-    font-size: 26px;
-    font-weight: 900;
-    line-height: 0.9;
-    font-family: var(--font-heading);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.color-primary {
-    color: var(--primary);
-}
-
-.color-secondary {
-    color: var(--secondary);
-}
-
-.logo-text-sub {
-    font-size: 11px;
-    font-weight: 700;
-    color: #cbd5e0;
-    font-family: var(--font-heading);
-    letter-spacing: 0.5px;
-    margin-top: 2px;
 }
 
 .desktop-nav ul {
@@ -337,67 +306,186 @@ a {
 }
 
 /* Trust Section */
-.trust-section {
+/* About Us Section */
+.about-section {
     padding: 80px 0;
+    background-color: var(--bg-white);
 }
 
-.trust-inner {
-    display: flex;
-    align-items: center;
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
+    margin-bottom: 60px;
+    align-items: center;
 }
 
-.trust-image {
-    flex: 1;
+.about-block {
+    margin-bottom: 40px;
 }
 
-.trust-image img {
+.about-block:last-child {
+    margin-bottom: 0;
+}
+
+.about-block h2 {
+    font-size: 32px;
+    color: var(--bg-dark);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-block h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.about-block p {
+    font-size: 16px;
+    color: var(--text-grey);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.about-image-wrapper {
+    position: relative;
+}
+
+.about-image-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.about-image-card img {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
-.trust-content {
-    flex: 1;
+.image-caption {
+    padding: 25px;
+    background-color: var(--secondary);
+    color: white;
 }
 
-.trust-content h2 {
+.image-caption h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.image-caption p {
+    font-size: 14px;
+    margin: 0;
+    color: #e0f2f1;
+    line-height: 1.6;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid #eaeaea;
+}
+
+.section-header h2 {
     font-size: 36px;
     color: var(--bg-dark);
 }
 
-.trust-content p {
-    font-size: 16px;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px 20px;
+    background: #fcfcfc;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background-color: rgba(43, 210, 210, 0.1);
+    color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-icon i {
+    width: 30px;
+    height: 30px;
+}
+
+.feature-box h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--bg-dark);
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: var(--text-grey);
+    line-height: 1.6;
+}
+
+/* About CTA */
+.about-cta {
+    background-color: #f4f7f6;
+    border-radius: 12px;
+    padding: 50px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.about-cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--bg-dark);
+}
+
+.about-cta p {
+    font-size: 18px;
     color: var(--text-grey);
     margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.trust-list {
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-.trust-list li {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 15px;
+.about-cta-buttons {
     display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-cta-buttons .btn {
+    display: inline-flex;
     align-items: center;
     gap: 10px;
-}
-
-.trust-list i {
-    color: var(--secondary);
-}
-
-.trust-content .btn-secondary {
-    color: var(--primary);
-    border-color: var(--primary);
-}
-
-.trust-content .btn-secondary:hover {
-    background-color: var(--primary);
-    color: var(--text-light);
 }
 
 /* CTA Banner */
@@ -723,6 +811,11 @@ a {
     
     .hero-text-box h1 { font-size: 32px; }
     .hero-buttons { flex-direction: column; }
-    .trust-inner { flex-direction: column; }
+    
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .features-grid { grid-template-columns: 1fr; gap: 20px; }
+    .about-cta { padding: 30px 20px; }
+    .about-cta-buttons { flex-direction: column; }
+    
     .footer-grid { grid-template-columns: 1fr; }
 }
