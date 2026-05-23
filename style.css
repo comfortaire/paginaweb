@@ -615,6 +615,85 @@ a {
     display: none;
 }
 
+.top-left .mobile-phone-cta {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.phone-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 117, 80, 0.4);
+    animation: pulseCallBtn 2s infinite;
+    margin-right: 15px;
+}
+
+.phone-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+    animation: ringPhone 2.5s infinite;
+}
+
+.whatsapp-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: #25D366;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    animation: pulseWhatsApp 2s infinite;
+}
+
+.whatsapp-icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+    animation: ringPhone 2.5s infinite;
+    animation-delay: 1.25s;
+}
+
+.phone-number-text {
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    font-family: var(--font-heading);
+}
+
+@keyframes pulseCallBtn {
+    0% { box-shadow: 0 0 0 0 rgba(255, 117, 80, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 117, 80, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 117, 80, 0); }
+}
+
+@keyframes pulseWhatsApp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@keyframes ringPhone {
+    0% { transform: rotate(0); }
+    5% { transform: rotate(15deg); }
+    10% { transform: rotate(-15deg); }
+    15% { transform: rotate(20deg); }
+    20% { transform: rotate(-20deg); }
+    25% { transform: rotate(15deg); }
+    30% { transform: rotate(-15deg); }
+    35% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .mobile-menu-toggle {
@@ -755,59 +834,6 @@ a {
     .top-bar-inner { flex-direction: column; text-align: center; gap: 0; padding: 2px 0; }
     .top-bar { padding: 12px 0; }
     .top-left { justify-content: center; width: 100%; }
-    
-    .top-left .mobile-phone-cta {
-        display: inline-flex;
-        align-items: center;
-        text-decoration: none;
-        margin: 5px 0;
-    }
-    
-    .phone-icon-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 48px;
-        height: 48px;
-        background-color: var(--primary);
-        border-radius: 50%;
-        color: white;
-        box-shadow: 0 4px 15px rgba(255, 117, 80, 0.4);
-        animation: pulseCallBtn 2s infinite;
-        margin-right: 15px;
-    }
-    
-    .phone-icon-wrapper svg {
-        width: 24px;
-        height: 24px;
-        animation: ringPhone 2.5s infinite;
-    }
-    
-    .phone-number-text {
-        color: white;
-        font-size: 24px;
-        font-weight: 900;
-        letter-spacing: 0.5px;
-        font-family: var(--font-heading);
-    }
-    
-    @keyframes pulseCallBtn {
-        0% { box-shadow: 0 0 0 0 rgba(255, 117, 80, 0.6); }
-        70% { box-shadow: 0 0 0 15px rgba(255, 117, 80, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(255, 117, 80, 0); }
-    }
-    
-    @keyframes ringPhone {
-        0% { transform: rotate(0); }
-        5% { transform: rotate(15deg); }
-        10% { transform: rotate(-15deg); }
-        15% { transform: rotate(20deg); }
-        20% { transform: rotate(-20deg); }
-        25% { transform: rotate(15deg); }
-        30% { transform: rotate(-15deg); }
-        35% { transform: rotate(0); }
-        100% { transform: rotate(0); }
-    }
     
     .hero-text-box h1 { font-size: 32px; }
     .hero-buttons { flex-direction: column; }
