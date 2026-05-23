@@ -514,7 +514,7 @@ a {
 
 /* Footer */
 .main-footer {
-    background-color: var(--bg-dark);
+    background-color: #0e1e1e;
     color: #cccccc;
     padding-top: 60px;
 }
